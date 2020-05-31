@@ -1,0 +1,48 @@
+---
+ip: "192.168.10.10"
+memory: 8000
+cpus: 4
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: ~/Work/glamorise-amazon-mws/
+      to: /home/vagrant/code/glamorise-amazon-mws/
+    # - map: ~/Work/lender-app/
+    #   to: /home/vagrant/code/lender-app/
+    - map: ~/Work/partners-fundinghelp-laravel-2/
+      to: /home/vagrant/code/partners-app/
+      type: "nfs"
+    - map: ~/Work/amazon-mws-service/
+      to: /home/vagrant/code/amazon-mws-service/
+    - map: ~/Work/glamorise-marketing/
+      to: /home/vagrant/code/glamorise-marketing
+
+sites:
+    - map: glamorise.mws
+      to: /home/vagrant/code/glamorise-amazon-mws/public
+    # - map: lender.test
+    #   to: /home/vagrant/code/lender-app/public
+    - map: partners.test
+      to: /home/vagrant/code/partners-app/public
+
+    - map: glamorise.marketing
+      to: /home/vagrant/code/glamorise-marketing/public
+
+databases:
+    - homestead
+    - glamoriseMws
+    - referrals
+    - UserFrosting
+
+features:
+    - mariadb: false
+    - ohmyzsh: true
+    - webdriver: false
+ports:
+    - send: 8080
+      to: 8080
