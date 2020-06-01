@@ -21,6 +21,8 @@ folders:
       to: /home/vagrant/code/amazon-mws-service/
     - map: ~/Work/glamorise-marketing/
       to: /home/vagrant/code/glamorise-marketing
+    - map: ~/Work/funding-group-api/
+      to: /home/vagrant/code/funding-group-api
 
 sites:
     - map: glamorise.mws
@@ -33,11 +35,15 @@ sites:
     - map: glamorise.marketing
       to: /home/vagrant/code/glamorise-marketing/public
 
+    - map: funding.api
+      to: /home/vagrant/code/funding-group-api/public
+
 databases:
     - homestead
     - glamoriseMws
     - referrals
     - UserFrosting
+    - fundingApi
 
 features:
     - mariadb: false
