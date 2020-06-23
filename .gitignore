@@ -2,7 +2,6 @@
 /.vagrant
 phpunit.xml
 /Homestead.json
-/aliases
 /mysqldump.sql.gz
 /mysql_backup
 /postgres_backup

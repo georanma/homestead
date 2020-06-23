@@ -37,6 +37,7 @@ sites:
 
     - map: funding.api
       to: /home/vagrant/code/funding-group-api/public
+      php: "7.4"
 
 databases:
     - homestead
