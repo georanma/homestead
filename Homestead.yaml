@@ -23,6 +23,8 @@ folders:
       to: /home/vagrant/code/glamorise-marketing
     - map: ~/Work/funding-group-api/
       to: /home/vagrant/code/funding-group-api
+    - map: ~/Work/laravel-confident/
+      to: /home/vagrant/code/laravel-confident
 
 sites:
     - map: glamorise.mws
@@ -38,6 +40,8 @@ sites:
     - map: funding.api
       to: /home/vagrant/code/funding-group-api/public
       php: "7.4"
+    - map: laravel.confident
+      to: /home/vagrant/code/laravel-confident/public
 
 databases:
     - homestead
